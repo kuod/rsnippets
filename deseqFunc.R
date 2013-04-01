@@ -13,13 +13,8 @@ deseqFunc <- function(data, condition, name)
   #   Data
   #     _output.txt     genes, pvals, log-fold change calculated from DESeq
   #     _sigOutput.txt  only genes with an adjusted pvalue < 0.1
-  ### data looks like this
-  #       before  before  after  after
-  # gene
-  # gene
-  
-  ### condition looks like this
-  # before  before  after after
+  ### data [data frame: genes as rows, counts with condition as column
+  ### condition [vector of conditions that matches column of data]
   
   dispersionName <- paste(name,"_plot1",sep="")
   maName <- paste(name,"_plot2",sep="")
