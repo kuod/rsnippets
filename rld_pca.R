@@ -22,7 +22,7 @@ rld_pca <- function (rld, intgroup = "condition", ntop = 500,
   pc2lab <- paste0("PC2 (",as.character(pc2var),"%)")
   x_max <- max(abs(pca$x[,1]))
   y_max <- max(abs(pca$x[,2]))
-  plot(PC2~PC1, data=as.data.frame(pca$x), bg=colors[fac], pch=21, xlab=pc1lab, ylab=pc2lab, main=main, xlim=c(-1.7 * x_max, 1.7*x_max), ylim=c(-1.7*y_max, 1.7* ↪y_max), ...)
+  plot(PC2~PC1, data=as.data.frame(pca$x), bg=colors[fac], pch=21, xlab=pc1lab, ylab=pc2lab, main=main, xlim=c(-1.7 * x_max, 1.7*x_max), ylim=c(-1.7*y_max, 1.7* y_max), ...)
   with(as.data.frame(pca$x), textxy(PC1, PC2, labs=rownames(as.data.frame(pca$x)), cex=textcx))
   legend(legendpos, legend=levels(fac), col=colors, pch=20)
   #     rldyplot(PC2 ~ PC1, groups = fac, data = as.data.frame(pca$rld),
