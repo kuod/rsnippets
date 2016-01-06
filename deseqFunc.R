@@ -1,5 +1,6 @@
 deseqFunc <- function(data, condition, name)
 {
+  ### DEPRECATED in favor of better DESeq Function ### 
   # Runs DESeq differential gene analyses on a count matrix
   #
   # Args:
